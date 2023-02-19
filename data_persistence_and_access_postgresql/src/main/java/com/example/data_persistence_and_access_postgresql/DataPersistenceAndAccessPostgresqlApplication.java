@@ -30,9 +30,9 @@ public class DataPersistenceAndAccessPostgresqlApplication {
 		return args -> {
 			JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 			executeScript(jdbcTemplate, "create-database.sql");
-			executeScript(jdbcTemplate, "create-tables.sql");
-			executeScript(jdbcTemplate, "add-relationships.sql");
-			executeScript(jdbcTemplate, "populate-data.sql");
+			executeScript(jdbcTemplate, "01_tableCreate.sql");
+			executeScript(jdbcTemplate, "02_relationshipSuperheroAssistant.sql");
+			executeScript(jdbcTemplate, "04_insertSuperheroes.sql");
 		};
 	}
 	// 1. The executeScript() method takes a JdbcTemplate instance and a scriptName as input.

@@ -9,7 +9,8 @@ CREATE TABLE superhero
 CREATE TABLE assistant
 (
     id   SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    superhero_id INTEGER REFERENCES superhero(id)
 );
 
 CREATE TABLE power
@@ -18,3 +19,6 @@ CREATE TABLE power
     name VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL
 );
+
+
+
