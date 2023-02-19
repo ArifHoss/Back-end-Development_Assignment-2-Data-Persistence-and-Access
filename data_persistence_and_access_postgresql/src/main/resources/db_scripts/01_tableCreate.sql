@@ -1,4 +1,4 @@
-CREATE TABLE superhero
+CREATE TABLE IF NOT EXISTS superhero
 (
     id   SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL ,
@@ -6,14 +6,14 @@ CREATE TABLE superhero
     origin VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE assistant
+CREATE TABLE IF NOT EXISTS assistant
 (
     id   SERIAL PRIMARY KEY,
     name VARCHAR(255),
     superhero_id INTEGER REFERENCES superhero(id)
 );
 
-CREATE TABLE power
+CREATE TABLE IF NOT EXISTS power
 (
     id   SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
