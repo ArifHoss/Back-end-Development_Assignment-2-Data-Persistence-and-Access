@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Back-end-Development_Assignment-2-Data-Persistence-and-Access.iml" filepath="$PROJECT_DIR$/.idea/Back-end-Development_Assignment-2-Data-Persistence-and-Access.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/data_persistence_and_access_postgresql.iml" filepath="$PROJECT_DIR$/data_persistence_and_access_postgresql/data_persistence_and_access_postgresql.iml" />
     </modules>
   </component>
 </project>
