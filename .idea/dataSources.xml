@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="SuperheroesDb@localhost" uuid="96c84511-14b2-4948-8ccc-b7b10b2f9663">
+    <data-source source="LOCAL" name="SuperheroesDb" uuid="63221ff0-00cc-4857-8e4d-c99ebe8a8efe">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/SuperheroesDb</jdbc-url>
+      <jdbc-url>jdbc:postgresql:SuperheroesDb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

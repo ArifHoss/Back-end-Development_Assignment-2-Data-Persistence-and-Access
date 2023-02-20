@@ -31,29 +31,17 @@ public class DataPersistenceAndAccessPostgresqlApplication {
     public CommandLineRunner initDatabase(DataSource dataSource) {
         return args -> {
             JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-            if (!databaseExists(jdbcTemplate, "SuperheroesDb")) {
-                executeScript(jdbcTemplate, "create-database.sql");
-
-                if (!tableExists(jdbcTemplate, "superhero")) {
-                    executeScript(jdbcTemplate, "01_tableCreate.sql");
-                    executeScript(jdbcTemplate, "04_insertSuperheroes.sql");
-                }
-                if (!tableExists(jdbcTemplate, "assistant")) {
-                    executeScript(jdbcTemplate, "02_relationshipSuperheroAssistant.sql");
-                    executeScript(jdbcTemplate, "05_insertAssistants.sql");
-                }
-                if (!tableExists(jdbcTemplate, "power")) {
-                    executeScript(jdbcTemplate, "03_relationshipSuperheroPower.sql");
-                    executeScript(jdbcTemplate, "06_power.sql");
-                }
-
-                if (!tableExists(jdbcTemplate, "superhero_power")) {
-                    executeScript(jdbcTemplate, "07_updateSuperhero.sql");
-                }
-                if (tableExists(jdbcTemplate, "assistant")) {
-                    executeScript(jdbcTemplate, "08_deleteAssistant.sql");
-                }
-            }
+//            if (!databaseExists(jdbcTemplate, "SuperheroesDb")) {
+//                executeScript(jdbcTemplate, "create-database.sql");
+                executeScript(jdbcTemplate, "01_tableCreate.sql");
+//                executeScript(jdbcTemplate, "02_relationshipSuperheroAssistant.sql");
+//                executeScript(jdbcTemplate, "03_relationshipSuperheroPower.sql");
+//                executeScript(jdbcTemplate, "04_insertSuperheroes.sql");
+//                executeScript(jdbcTemplate, "05_insertAssistants.sql");
+//                executeScript(jdbcTemplate, "06_power.sql");
+//                executeScript(jdbcTemplate, "07_updateSuperhero.sql");
+//                executeScript(jdbcTemplate, "08_deleteAssistant.sql");
+//            }
         };
     }
 

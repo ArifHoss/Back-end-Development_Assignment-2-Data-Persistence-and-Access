@@ -4,6 +4,10 @@
     <file url="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/src/main/resources/db_scripts/01_tableCreate.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/src/main/resources/db_scripts/02_relationshipSuperheroAssistant.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/src/main/resources/db_scripts/03_relationshipSuperheroPower.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/src/main/resources/db_scripts/05_insertAssistants.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/src/main/resources/db_scripts/06_power.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/src/main/resources/db_scripts/07_updateSuperhero.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/src/main/resources/db_scripts/08_deleteAssistant.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/data_persistence_and_access_postgresql/src/main/resources/db_scripts/create-database.sql" dialect="GenericSQL" />
   </component>
 </project>

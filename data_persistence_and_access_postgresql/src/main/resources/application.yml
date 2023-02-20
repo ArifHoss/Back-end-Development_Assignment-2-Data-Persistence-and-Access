@@ -7,7 +7,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update # Change to "create" for first time use to generate database schema then change to "update"
+      ddl-auto: create # Change to "create" for first time use to generate database schema then change to "update"
     properties:
       hibernate:
         show_sql: true
