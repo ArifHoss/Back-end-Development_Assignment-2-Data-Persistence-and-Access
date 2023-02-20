@@ -1,7 +1,7 @@
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/SuperheroesDb
+    url: jdbc:postgresql://localhost:5432/Chinook
     username: postgres
     password: root
   jpa:
