@@ -26,6 +26,9 @@ public class DataPersistenceAndAccessPostgresqlApplication implements CommandLin
     public void run(String... args) throws Exception {
         int choice = -1;
         while (choice != 0) {
+            System.out.println("****************************************");
+            System.out.println("________________MENU________________");
+            System.out.println("****************************************");
             System.out.println("Select an option:");
             System.out.println("1. List all customers");
             System.out.println("2. Find customer by ID");
@@ -35,6 +38,7 @@ public class DataPersistenceAndAccessPostgresqlApplication implements CommandLin
             System.out.println("6. Update an existing customer");
             System.out.println("7. Delete a customer");
             System.out.println("0. Exit");
+            System.out.println("****************************************");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
@@ -43,18 +47,21 @@ public class DataPersistenceAndAccessPostgresqlApplication implements CommandLin
             switch (choice) {
                 case 1:
                     List<Customer> customers = customerService.findAll();
+                    System.out.println("****************************************");
                     customers.forEach(System.out::println);
                     break;
                 case 2:
                     System.out.print("Enter customer ID: ");
                     int id = scanner.nextInt();
                     Customer customer = customerService.findById(id);
+                    System.out.println("****************************************");
                     System.out.println(customer);
                     break;
                 case 3:
                     System.out.print("Enter customer name: ");
                     String name = scanner.nextLine();
                     customer = customerService.findByName(name);
+                    System.out.println("****************************************");
                     System.out.println(customer);
                     break;
                 case 4:
@@ -63,6 +70,7 @@ public class DataPersistenceAndAccessPostgresqlApplication implements CommandLin
                     System.out.print("Enter offset: ");
                     int offset = scanner.nextInt();
                     customers = customerService.findAllWithLimit(limit, offset);
+                    System.out.println("****************************************");
                     customers.forEach(System.out::println);
                     break;
                 case 5:
@@ -90,6 +98,7 @@ public class DataPersistenceAndAccessPostgresqlApplication implements CommandLin
                     String email = scanner.nextLine();
                     Customer newCustomer = new Customer(0, firstName, lastName, company, address, city, state, country, postalCode, phone, fax, email);
                     customerService.save(newCustomer);
+                    System.out.println("****************************************");
                     System.out.println("New customer created with ID " + newCustomer.id());
                     break;
                 case 6:
@@ -147,10 +156,12 @@ public class DataPersistenceAndAccessPostgresqlApplication implements CommandLin
 
                         Customer updatedCustomer = new Customer(id, firstName, lastName, company, address, city, state, country, postalCode, phone, fax, email);
                         customerService.update(updatedCustomer);
+                        System.out.println("****************************************");
                         System.out.println("Customer updated successfully");
                     }
                     break;
-
+                default:
+                    System.out.println("Wrong choice!");
             }
         }
     }
