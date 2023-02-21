@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class CustomerService implements CustomerRepo{
+public class CustomerService implements CustomerRepo {
 
     private final JdbcTemplate jdbcTemplate;
 
