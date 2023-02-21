@@ -1,14 +1,16 @@
 package com.example.data_persistence_and_access_postgresql.service;
 
+import com.example.data_persistence_and_access_postgresql.exception.CustomIllegalStateException;
 import com.example.data_persistence_and_access_postgresql.model.Customer;
 import com.example.data_persistence_and_access_postgresql.repository.CustomerRepo;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-public class CustomerService implements CustomerRepo{
+public class CustomerService implements CustomerRepo {
 
     private final JdbcTemplate jdbcTemplate;
 
@@ -26,6 +28,7 @@ public class CustomerService implements CustomerRepo{
     public Customer findById(int id) {
         String sql = "SELECT * FROM customer WHERE customer_id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{id}, new CustomerMapper());
+
     }
 
     @Override
